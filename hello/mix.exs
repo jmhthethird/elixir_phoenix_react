@@ -80,7 +80,8 @@ defmodule Hello.MixProject do
         "tailwind hello --minify",
         "esbuild hello --minify",
         "phx.digest"
-      ]
+      ],
+      "react.release": ["frontend", "phx.gen.release"]
     ]
   end
 end
