@@ -7,6 +7,9 @@ defmodule Hello.Application do
 
   @impl true
   def start(_type, _args) do
+    :ets.new(:counter, [:set, :named_table, :public])
+    :ets.insert_new(:counter, {"count", 0})
+
     children = [
       HelloWeb.Telemetry,
       Hello.Repo,

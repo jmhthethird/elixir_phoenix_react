@@ -34,17 +34,16 @@ window.addEventListener("phx:page-loading-start", _info => topbar.show(300))
 window.addEventListener("phx:page-loading-stop", _info => topbar.hide())
 
 // connect if there are any LiveViews on the page
-liveSocket.connect()
+// liveSocket.connect()
 
 // expose liveSocket on window for web console debug logs and latency simulation:
 // >> liveSocket.enableDebug()
 // >> liveSocket.enableLatencySim(1000)  // enabled for duration of browser session
 // >> liveSocket.disableLatencySim()
-window.liveSocket = liveSocket
+// window.liveSocket = liveSocket
 
-// document.querySelector("p.text-\\[2rem\\]").innerHTML = greet("Phoenix");
 import React from "react";
 import ReactDOM from "react-dom";
-import Greeter from "./greeter";
+import Counter from "./counter";
 
-ReactDOM.render(<Greeter />, greeting)
+ReactDOM.render(<Counter />, document.getElementById('counter'))
